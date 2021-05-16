@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="Transactions.css">
+    <script type="text" src="Transactions.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png"alt="" class="logo">
+        <h1>Welcome to 24*7 Banking</h1>
+        <p class="f5">We Power Your Dreams</p>
+    </header>
+    <a href="Home.html">
+        <input type="submit" class="logout" value="Logout" style="float: right;margin-right: 30px;color:green;font-weight: bold;">
+    </a>
+
+    <div class="navbar">
+        <a class="links" href="http://127.0.0.1:5500/Home.html#home">Home</a>
+        <a class="links" href="http://127.0.0.1:5500/Home.html#services">Services</a>
+        <a class="links" href="http://127.0.0.1:5500/Home.html#contact">Contact Us</a>
+    </div>
+
+    <h2>Online Transactions</h2>
+    <div class="row">
+        <div class="col-1 menu">
+             <table class="trns">
+                <tr style="text-align: center;"><td>Amount Transactions</td></tr> <br>
+                <tr><td><input type="text" class="transin" id="amount" onfocus="this.value=''" value="Enter amount in ₹"></td></tr>
+                <tr><td><select id="option" class="transin">
+                    <option value="Choose your option" class="transin" >Choose your option</option>
+                    <option value="Deposit" id="deposit"  class="transin">Deposit</option>
+                    <option value="Withdraw" id="withdraw" class="transin">Withdraw</option>
+                </select></td></tr>
+                <tr><td><input type="text" class="dis" id="discription" value="Description" onfocus="this.value=''"></td></tr>
+                <tr><td><button class="pbtn" onclick="return operate()">Process</button></td></tr>
+                <tr><td><span id="err" style="color: red;"></span></td></tr>
+            </table>
+        </div> 
+        <div class="col-2"> 
+            <table class="bal" id="balance">
+                <tr>
+                    <td colspan="2">Total Available Balance</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bolder">₹ <span id="balance">0.0</span> /- </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-3 right">
+            <div class="aside">
+                <table id="deposit">
+                    <tr>
+                        <th>Total Deposit</th>
+                        <th colspan="2" id="totalDeposit"></th>
+                    </tr>
+                    <tr>
+                        <td>Time-date</td> 
+                        <td style="padding-left: 30px;">Rupess</td> 
+                        <td style="padding-left: 60px;">Description</td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            <div class="col-4 ">
+                <div class="aside1">
+                    <table id="withdraw">
+                        <tr>
+                            <th>Withdraw</th>
+                            <th colspan="2" id="totalWithdraw"></th>
+                        </tr>
+                        <tr>
+                            <td>Time-date</td>
+                            <td style="padding-left:30px">Rupess</td>
+                            <td style="padding-left: 60px;">Description</td>
+                        </tr>
+                    </table>
+                </div>
+        </div> 
+    </div>
+
+    <footer>
+        <p class="addr">Address : 24*7/BTM Banglore <br>
+            Mobile No: 9844818037 <br>
+            Email id: Abc@gmail.com
+        </p>
+        <p class="addr-mid1">Copyright Protected</p> <br>
+        <p class="addr-mid2">Right to know</p> <br>
+        
+        <p class="addr-last1">Privacy and Policy</p>
+        <p class="addr-last2">Report </p>
+    </footer>
+</body>
+</html>
